@@ -1,4 +1,4 @@
-import { RevolvoAISymbol, check } from "../assets";
+import { brainwaveSymbol, check } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
 import Section from "./Section";

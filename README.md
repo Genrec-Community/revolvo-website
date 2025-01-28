@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
 
-  <h3 align="center">Revolvo Project</h3>
+  <h3 align="center">Modern UI/UX website</h3>
 
    <div align="center">
      Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube.
@@ -38,7 +38,7 @@ If you prefer visual learning, this is the perfect resource for you. Follow our 
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Brainwave - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard, serving as a reference or inspiration for future modern applications or websites in general.
+Revolvo:AI Library - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard, serving as a reference or inspiration for future modern applications or websites in general.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
 
@@ -81,8 +81,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/JavaScript-Mastery-Pro/Revolvo:AI Library.git
-cd Shyam
+git clone https://github.com/JavaScript-Mastery-Pro/brainwave.git
+cd brainwave
 ```
 
 **Installation**
@@ -863,4 +863,3 @@ Enjoyed creating this project? Dive deeper into our PRO courses for a richer lea
 <a href="https://www.jsmastery.pro/ultimate-next-course" target="_blank">
 <img src="https://i.ibb.co/804sPK6/Image-720.png" alt="Project Banner">
 </a>
-# revolvo-website

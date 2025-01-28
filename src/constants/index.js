@@ -38,34 +38,29 @@ import {
 
 export const navigation = [
   {
-    id: "0",
+    id: "1",
     title: "Features",
     url: "#features",
   },
   {
-    id: "1",
+    id: "2",
     title: "Pricing",
     url: "#pricing",
   },
   {
-    id: "2",
+    id: "3",
     title: "How to use",
     url: "#how-to-use",
   },
   {
-    id: "3",
+    id: "4",
     title: "Roadmap",
     url: "#roadmap",
   },
+  
   {
-    id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
-  },
-  {
-    id: "5",
-    title: "Sign in",
+    id: "0",
+    title: "The Revolvo Project",
     url: "#login",
     onlyMobile: true,
   },
@@ -77,13 +72,13 @@ export const notificationImages = [notification4, notification3, notification2];
 
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
-export const RevolvoAIServices = [
+export const brainwaveServices = [
   "Photo generating",
   "Photo enhance",
   "Seamless Integration",
 ];
 
-export const RevolvoAIServicesIcons = [
+export const brainwaveServicesIcons = [
   recording03,
   recording01,
   disc02,
