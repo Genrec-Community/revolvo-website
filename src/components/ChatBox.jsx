@@ -155,8 +155,8 @@ const ChatBox = ({ className = '', onActiveChange = () => {} }) => {
   };
 
   return (
-    <div className={`bg-tertiary rounded-lg shadow-lg flex flex-col ${className}`}>
-      <div className="bg-primary p-4 rounded-t-lg">
+    <div className={`bg-tertiary rounded-md shadow-md flex flex-col px-12 ${className}`}>
+      <div className="bg-primary p-2 rounded-t-md">
         <h3 className="text-white font-bold text-[24px]">AI Assistant</h3>
       </div>
 
@@ -171,7 +171,7 @@ const ChatBox = ({ className = '', onActiveChange = () => {} }) => {
             className={`flex ${message.role === "assistant" ? "justify-start" : "justify-end"}`}
           >
             <div
-              className={`max-w-[80%] p-3 rounded-lg ${
+              className={`max-w-[70%] p-2 rounded-md ${
                 message.role === "assistant"
                   ? "bg-black-200 text-white"
                   : "bg-primary text-white"
