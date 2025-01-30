@@ -33,8 +33,8 @@ const Pricing = () => {
         </div>
 
         <Heading
-          tag="Get started with Revolvo:AI Library"
-          title="Pay once, use forever"
+          tag="Welcome To Genrec" 
+          title="Genrec : Revolutionizing AI for the future"
         />
 
         {/* Main content grid */}
@@ -52,10 +52,9 @@ const Pricing = () => {
             </div>
 
             <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-              <h4 className="h4 mb-4">Photo editing</h4>
+              <h4 className="h4 mb-4">GenrecAI</h4>
               <p className="body-2 mb-[3rem] text-n-3">
-                Automatically enhance your photos using our AI app&apos;s photo
-                editing feature. Try it now!
+                The GenrecAI wouldn't just follow the Future- we'd CREATE it
               </p>
             </div>
             <PhotoChatMessage />
@@ -64,10 +63,13 @@ const Pricing = () => {
           {/* Right column - Video generation */}
           <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
             <div className="py-12 px-4 xl:px-8">
-              <h4 className="h4 mb-4">Video generation</h4>
+              <h4 className="h4 mb-4">Genrec AI - Creators of Revolvo</h4>
               <p className="body-2 mb-[2rem] text-n-3">
-                The world’s most powerful AI photo and video art generation
-                engine. What will you create?
+                Revolutionize your creative process with AI-powered visuals. From hyper-realistic to mind-bending, it’s all possible in an instant.
+                <br />
+                🔥 Endless creative possibilities
+                <br />
+                ⚡ Real-time, stunning results
               </p>
 
               <ul className="flex items-center justify-between">
