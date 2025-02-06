@@ -92,8 +92,47 @@ const Roadmap = () => (
             </div>
           </div>
 
-          {/* Photo 2 - Jai Samyukth BU */}
           <div className="group relative">
+            <img 
+              src="src/assets/harish.jpg"  // Replace with your image path
+              alt="Harish V" 
+              className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+            />
+            <p className="mt-3 text-center text-n-1 body-2">Harish V</p>
+            <div className="flex justify-center space-x-4 mt-2">
+          
+              <a href="https://www.linkedin.com/in/harish-v-b63131265/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-blue-600 hover:text-blue-800 text-2xl cursor-pointer" />
+              </a>
+            </div>
+          </div>
+
+          <div className="group relative">
+            <img 
+              src="src/assets/logesh.jpg"  // Replace with your image path
+              alt="Logesh M" 
+              className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+            />
+            <p className="mt-3 text-center text-n-1 body-2">Logesh M</p>
+            <div className="flex justify-center space-x-4 mt-2">
+              <a href="https://www.instagram.com/itz_loki._.03?igsh=MW5qOXV0OHZxcHV6Zg==" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-purple-500 hover:text-purple-700 text-2xl cursor-pointer" />
+              </a>
+              <a href="https://www.linkedin.com/in/logesh01?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-blue-600 hover:text-blue-800 text-2xl cursor-pointer" />
+              </a>
+            </div>
+          </div>
+
+         
+
+          {/* Photo 3 - Harish V */}
+         
+
+          {/* Photo 4 - Logesh M */}
+
+           {/* Photo 2 - Jai Samyukth BU */}
+           <div className="group relative">
             <img 
               src="src/assets/jai.jpg"  // Replace with your image path
               alt="Jai Samyukth BU" 
@@ -109,46 +148,21 @@ const Roadmap = () => (
               </a>
             </div>
           </div>
-
-          {/* Photo 3 - Harish V */}
-          <div className="group relative">
-            <img 
-              src="src/assets/harish.jpg"  // Replace with your image path
-              alt="Harish V" 
-              className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
-            />
-            <p className="mt-3 text-center text-n-1 body-2">Harish V</p>
-            <div className="flex justify-center space-x-4 mt-2">
-              <a href="https://www.instagram.com/harish_v" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="text-purple-500 hover:text-purple-700 text-2xl cursor-pointer" />
-              </a>
-              <a href="https://www.linkedin.com/in/harish-v" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="text-blue-600 hover:text-blue-800 text-2xl cursor-pointer" />
-              </a>
-            </div>
-          </div>
-
-          {/* Photo 4 - Logesh M */}
-          <div className="group relative">
-            <img 
-              src="src/assets/logesh.jpg"  // Replace with your image path
-              alt="Logesh M" 
-              className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
-            />
-            <p className="mt-3 text-center text-n-1 body-2">Logesh M</p>
-            <div className="flex justify-center space-x-4 mt-2">
-              <a href="https://www.instagram.com/logesh_m" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="text-purple-500 hover:text-purple-700 text-2xl cursor-pointer" />
-              </a>
-              <a href="https://www.linkedin.com/in/logesh-m" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="text-blue-600 hover:text-blue-800 text-2xl cursor-pointer" />
-              </a>
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>
+
+    <div className="mt-16 text-center">
+    <p className="body-2 text-n-4">
+      If you want to join with GENREC send us an email at <a href="mailto:ai.genrec@gmail.com" className="text-blue-600 hover:underline">ai.genrec@gmail.com</a>
+    </p>
+    </div>
+
+    
   </Section>
+
+
 );
 
 export default Roadmap;
