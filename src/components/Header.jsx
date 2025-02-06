@@ -31,13 +31,19 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
+      className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero"></a>
+        {/* Logo */}
+       
+        {/* The Revolvo Project Button (Moved to the left) */}
+        <Button className="hidden lg:flex text-4xl mr-auto" >
+          The Revolvo Project
+        </Button>
 
+        {/* Navigation Menu */}
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
@@ -65,11 +71,7 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-      
-        <Button className="hidden lg:flex text-4xl" href="#login">
-          The Revolvo Project
-        </Button>
-
+        {/* Hamburger Menu Button */}
         <Button
           className="ml-auto lg:hidden"
           px="px-3"

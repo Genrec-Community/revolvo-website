@@ -44,17 +44,17 @@ export const navigation = [
   },
   {
     id: "2",
-    title: "Pricing",
+    title: "Genrec",
     url: "#pricing",
   },
   {
     id: "3",
-    title: "How to use",
+    title: "Contact Form",
     url: "#how-to-use",
   },
   {
     id: "4",
-    title: "Roadmap",
+    title: "Our Future Projects",
     url: "#roadmap",
   },
   

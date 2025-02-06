@@ -5,6 +5,7 @@ import Tagline from "./Tagline";
 import { roadmap } from "../constants";
 import { check2, grid, loading1 } from "../assets";
 import { Gradient } from "./design/Roadmap";
+import { FaInstagram, FaLinkedin } from "react-icons/fa"; // Import social media icons
 
 const Roadmap = () => (
   <Section className="overflow-hidden" id="roadmap">
@@ -73,48 +74,79 @@ const Roadmap = () => (
         <Heading tag="Gallery" title="Our Team" className="mb-12" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Photo 1 */}
+          {/* Photo 1 - Shyamnath Sankar */}
           <div className="group relative">
             <img 
-              src="src\assets\sam.png"  // Replace with your image path
-              alt="Feature 1" 
+              src="src/assets/sam.png"  // Replace with your image path
+              alt="Shyamnath Sankar" 
               className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
             />
             <p className="mt-3 text-center text-n-1 body-2">Shyamnath Sankar</p>
+            <div className="flex justify-center space-x-4 mt-2">
+              <a href="https://www.instagram.com/shyamnath_/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-purple-500 hover:text-purple-700 text-2xl cursor-pointer" />
+              </a>
+              <a href="https://in.linkedin.com/in/shyamnath-sankar-8b1a3432b" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-blue-600 hover:text-blue-800 text-2xl cursor-pointer" />
+              </a>
+            </div>
           </div>
 
-          {/* Photo 2 */}
+          {/* Photo 2 - Jai Samyukth BU */}
           <div className="group relative">
             <img 
-              src="src\assets\jai.jpg"  // Replace with your image path
-              alt="Feature 2" 
+              src="src/assets/jai.jpg"  // Replace with your image path
+              alt="Jai Samyukth BU" 
               className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
             />
             <p className="mt-3 text-center text-n-1 body-2">Jai Samyukth BU</p>
+            <div className="flex justify-center space-x-4 mt-2">
+              <a href="https://www.instagram.com/jai_samyukth17/?utm_source=qr&igsh=MWN2N211MnZ3aTQwbA%3D%3D#" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-purple-500 hover:text-purple-700 text-2xl cursor-pointer" />
+              </a>
+              <a href="https://in.linkedin.com/in/jai-samyukth" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-blue-600 hover:text-blue-800 text-2xl cursor-pointer" />
+              </a>
+            </div>
           </div>
 
-          {/* Photo 3 */}
+          {/* Photo 3 - Harish V */}
           <div className="group relative">
             <img 
-              src="src\assets\harish.jpg"  // Replace with your image path
-              alt="Feature 3" 
+              src="src/assets/harish.jpg"  // Replace with your image path
+              alt="Harish V" 
               className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
             />
             <p className="mt-3 text-center text-n-1 body-2">Harish V</p>
+            <div className="flex justify-center space-x-4 mt-2">
+              <a href="https://www.instagram.com/harish_v" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-purple-500 hover:text-purple-700 text-2xl cursor-pointer" />
+              </a>
+              <a href="https://www.linkedin.com/in/harish-v" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-blue-600 hover:text-blue-800 text-2xl cursor-pointer" />
+              </a>
+            </div>
           </div>
 
-          {/* Photo 4 */}
+          {/* Photo 4 - Logesh M */}
           <div className="group relative">
             <img 
-              src="src\assets\logesh.jpg"  // Replace with your image path
-              alt="Feature 4" 
+              src="src/assets/logesh.jpg"  // Replace with your image path
+              alt="Logesh M" 
               className="w-full h-64 object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
             />
             <p className="mt-3 text-center text-n-1 body-2">Logesh M</p>
+            <div className="flex justify-center space-x-4 mt-2">
+              <a href="https://www.instagram.com/logesh_m" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-purple-500 hover:text-purple-700 text-2xl cursor-pointer" />
+              </a>
+              <a href="https://www.linkedin.com/in/logesh-m" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-blue-600 hover:text-blue-800 text-2xl cursor-pointer" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </Section>
 );

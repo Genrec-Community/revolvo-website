@@ -1,61 +1,58 @@
 import { useState, useRef, useEffect } from 'react';
 
-const systemPrompt = `I am Shyamnath's AI assistant. I help visitors learn about Shyamnath and his work. Here's what I know about him:
+const systemPrompt = `I am Genrec AI's official assistant. I help visitors learn about Genrec AI, its projects, and the incredible team behind it. Here's what I know:
 
-About Shyamnath:
-- A tech enthusiast and AI developer based in Karur, India
-- Co-founder of Genrec, specializing in AI solutions
-- Expert in AI, chatbots, and RAG systems development
-- Passionate about solving problems through code and innovation
+About Genrec AI:
+- A revolutionary AI company founded by a team of innovators from VSB Engineering College, Karur.
+- Focused on AI-driven solutions for *education, automation, and digital transformation*.
+- Specializing in *AI chatbots, RAG-based AI systems, AI-integrated websites, and paperless automation*.
+- Passionate about privacy-first AI development that ensures efficiency without compromising security.
 
-Key Skills:
-- AI/ML Development
-- Python Programming
-- Hugging Face Technologies
-- API Development
-- Scalable System Architecture
+Core Team:
+- *Jai Samyukth B U* (Co-Founder)
+- *Shyamnath Sankar* (Co-Founder)
+- *Harish* (Technical Head)
+- *Lokesh* (Sales Executive)
 
-Contact Information:
-- Email: shyamnathsankar123@gmail.com
-- Location: Karur, India
-- Preferred Contact: Through the website's contact form or direct email
+Vision & Mission:
+- *Revolutionizing AI* with cutting-edge, privacy-focused technologies.
+- *Bridging the gap* between artificial intelligence and real-world applications.
+- *Driving sustainability* by reducing paper-based workflows and saving trees.
 
-I maintain a professional yet friendly tone and aim to help visitors connect with Shyamnath or learn about his work.`;
+I maintain a professional yet energetic tone and aim to help visitors connect with Genrec AI or learn about its work.`;
+
 
 const contextPrompts = {
-  projects: `Let me tell you about Shyamnath's notable projects:
-  - Co-founded Genrec: An AI-focused startup developing innovative solutions
-  - Built various chatbot applications using advanced AI technologies
-  - Developed scalable architectures for AI systems
-  - Created RAG (Retrieval-Augmented Generation) systems
-  Would you like to know more about any of these projects?`,
+  projects: `Let me introduce you to Genrec AI’s groundbreaking projects:
+  - *Revolvo AI Library: A next-gen, RAG-powered AI library that digitalizes books **while ensuring complete privacy* with local AI setups.
+  - *Chatbot Intelligence*: Advanced AI-driven chatbots for businesses, education, and personal productivity.
+  - *AI-Integrated Websites*: Creating smart, interactive, and intuitive websites powered by AI.
+  - *AI Software for Institutions: Automating manual processes to **eliminate paperwork* and enhance efficiency.
   
-  skills: `Shyamnath's expertise includes:
-  - AI/ML Development: Deep experience in building intelligent systems
-  - Python: Advanced programming and system architecture
-  - Hugging Face: Implementing state-of-the-art AI models
-  - API Development: Creating robust and scalable interfaces
-  - System Architecture: Designing efficient, scalable solutions
+  Would you like to explore any of these projects in detail?`,
+  
+  skills: `Genrec AI’s expertise spans across:
+  - *AI/ML Development*: Deep learning, NLP, and RAG-based AI.
+  - *Python & Hugging Face*: Advanced AI model implementation and fine-tuning.
+  - *API Development*: Building scalable, high-performance interfaces.
+  - *System Architecture*: Designing privacy-first, efficient AI solutions.
+
   Which area interests you the most?`,
   
-  contact: `You can reach Shyamnath in two ways:
-  1. Use the contact form on this website (recommended)
-     - Scroll down to the contact section
-     - Fill out your name, email, and message
-     - He'll receive it directly and respond promptly
+  contact: `You can reach the creators personally using:
+  1. *Official Email:* shyamnathsankar.s@gmail.com (Shyamnath Sankar)
+  2. *Official Email:* jaisamyukth@gmail.com (Jai Samyukth)
+  3. *Institutional Network:* VSB Engineering College, Karur (CSBS Department)
   
-  2. Email directly: shyamnathsankar123@gmail.com
-     - For business inquiries and collaboration opportunities
-     
-  Shyamnath is based in Karur, India, and is open to remote work and international collaborations.
-  How would you like to connect with him?`
+  Genrec AI is actively looking for *collaborations, research opportunities, and industry partnerships*.  
+  How would you like to connect with us?`
 };
 
 const ChatBox = ({ className = '', onActiveChange = () => {} }) => {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      content: "👋 Hello! I'm Shyamnath's AI assistant. I can tell you about his work, skills, and projects. What would you like to know?"
+      content: "👋 `I am Genrec AI's official assistant. I help visitors learn about Genrec AI, its projects, and the incredible team behind it."
     }
   ]);
   const [input, setInput] = useState("");
@@ -118,18 +115,17 @@ const ChatBox = ({ className = '', onActiveChange = () => {} }) => {
 
   const sendChatRequest = async (contextualPrompt, userMessage, retryAttempt = 0) => {
     try {
-      const response = await fetch('https://api.kluster.ai/v1', {
+      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDrnz8PneHDdMed6ktvVA7wCjPiuuhsahs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_MISTRAL_API_KEY}`
         },
         body: JSON.stringify({
-          model: "mistral-tiny",
-          messages: [
-            { role: "system", content: contextualPrompt },
-            ...messages.map(msg => ({ role: msg.role, content: msg.content })),
-            { role: "user", content: userMessage }
+          contents: [
+            {
+              role: "user",
+              parts: [{ text: `${contextualPrompt}\n\n${userMessage}` }]
+            }
           ]
         })
       });
@@ -144,7 +140,7 @@ const ChatBox = ({ className = '', onActiveChange = () => {} }) => {
       }
 
       const data = await response.json();
-      return data.choices[0].message.content;
+      return data.candidates[0].content.parts[0].text;
     } catch (error) {
       if (retryAttempt < MAX_RETRIES) {
         await sleep(RETRY_DELAY * (retryAttempt + 1));
